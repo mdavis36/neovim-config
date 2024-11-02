@@ -12,9 +12,11 @@
 
 -- <leader> is a space now
 local map = vim.keymap.set
-map("n", "<leader>q", ":qa!<CR>", {})
+-- map("n", "<leader>q", ":qa!<CR>", {})
 -- Fast saving with <leader> and s
 map("n", "<leader>s", ":w<CR>", {})
+-- Fast escape
+map("i", "jj", "<Esc>", {})
 -- Move around splits
 map("n", "<leader>wh", "<C-w>h", { desc = "switch window left" })
 map("n", "<leader>wj", "<C-w>j", { desc = "switch window right" })
@@ -36,6 +38,11 @@ map("n", "<leader>cm", builtin.git_commits, { desc = "Open Telescope to list git
 map("n", "<leader>n", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" })    -- open/close
 map("n", "<leader>nr", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" })         -- refresh
 map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { desc = "Search file in NvimTree" }) -- search file
+-- on_attach
+-- map("n", "l", edit_or_open,          { desc = "Edit Or Open"})
+-- map("n", "L", vsplit_preview,        { desc = "Vsplit Preview"})
+-- map("n", "h", api.tree.close,        { desc = "Close"})
+-- map("n", "H", api.tree.collapse_all, { desc = "Collapse All"})
 
 -- LSP
 map("n", "<leader>gm", function()
