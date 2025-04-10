@@ -5,11 +5,11 @@ return {
   keys = {
     {
       -- Customize or remove this keymap to your liking
-      "<leader> f",
+      "<leader>cf",
       function()
         require("conform").format({ async = true })
       end,
-      mode = "",
+      mode = { "n", "v" },
       desc = "Format buffer",
     },
   },
@@ -22,7 +22,7 @@ return {
       lua = { "stylua" },
       python = { "isort", "black" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
-      ["pp"] = { "clang-format" },
+      ["cpp"] = { "clang-format" },
     },
     -- Set default options
     default_format_opts = {
