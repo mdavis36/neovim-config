@@ -3,7 +3,7 @@
     "lazyvim.plugins.extras.lang.clangd",
     "lazyvim.plugins.extras.lang.cmake"
   ],
-  "install_version": 7,
+  "install_version": 14,
   "news": {
     "NEWS.md": "10960"
   },
