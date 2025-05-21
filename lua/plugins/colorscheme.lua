@@ -1,8 +1,8 @@
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-  { "shaunsingh/nord.nvim" },
-  { "Mofiqul/vscode.nvim" },
+  {
+    "mdavis36/vscode.nvim",
+    branch = "feature/render-md-headers",
+  },
 
   -- Configure LazyVim to load colorscheme
   {
@@ -12,4 +12,3 @@ return {
     },
   },
 }
-
