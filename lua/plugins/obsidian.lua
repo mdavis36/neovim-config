@@ -1,3 +1,10 @@
+vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>")
+
+vim.keymap.set("n", "<leader>ov", "<cmd>ObsidianFollowLink fvsplit<cr>")
+
+vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
+
+---@diagnostic disable: missing-fields
 return {
   "mdavis36/obsidian.nvim",
   branch = "feature/force-split-strategy",
@@ -138,11 +145,13 @@ return {
     -- * "use_path_only", e.g. '[[foo-bar.md]]'
     -- Or you can set it to a function that takes a table of options and returns a string, like this:
     wiki_link_func = function(opts)
+      ---@diagnostic disable-next-line: param-type-mismatch
       return require("obsidian.util").wiki_link_id_prefix(opts)
     end,
 
     -- Optional, customize how markdown links are formatted.
     markdown_link_func = function(opts)
+      ---@diagnostic disable-next-line: param-type-mismatch
       return require("obsidian.util").markdown_link(opts)
     end,
 
@@ -164,7 +173,7 @@ return {
       local out = {
         id = note.id,
         aliases = note.aliases,
-        tags = note.tags
+        tags = note.tags,
       }
 
       -- `note.metadata` contains any manually added fields in the frontmatter.
