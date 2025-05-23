@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>")
 
-vim.keymap.set("n", "<leader>ov", "<cmd>ObsidianFollowLink fvsplit<cr>")
+vim.keymap.set("n", "<leader>ov", "<cmd>ObsidianFollowLink vsplit_force<cr>")
 
 vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
 
@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
 return {
   "mdavis36/obsidian.nvim",
   branch = "feature/force-split-strategy",
+  verstion = "*",
 
   lazy = true,
   ft = "markdown",
@@ -219,7 +220,8 @@ return {
 
     picker = {
       -- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', 'mini.pick' or 'snacks.pick'.
-      name = "snacks.pick",
+      name = "telescope.nvim",
+      -- name = "snacks.pick",
       -- Optional, configure key mappings for the picker. These are the defaults.
       -- Not all pickers support all mappings.
       note_mappings = {
@@ -281,8 +283,8 @@ return {
     -- Optional, configure additional syntax highlighting / extmarks.
     -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
     ui = {
-      enable = false, -- set to false to disable all additional syntax features
-      update_debounce = 200, -- update delay after a text change (in milliseconds)
+      enable = false,         -- set to false to disable all additional syntax features
+      update_debounce = 200,  -- update delay after a text change (in milliseconds)
       max_file_length = 5000, -- disable UI features for files with more than this many lines
       -- Define how various check-boxes are displayed
       checkboxes = {
@@ -334,7 +336,7 @@ return {
       ---@return string
       img_name_func = function()
         -- Prefix image names with timestamp.
-        return string.format("Pasted image %s", os.date("%Y%m%d%H%M%S"))
+        return string.format("Pasted-image-%s", os.date("%Y%m%d%H%M%S"))
       end,
 
       -- A function that determines the text to insert in the note when pasting an image.

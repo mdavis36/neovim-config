@@ -14,6 +14,7 @@ return {
       },
     },
     picker = {
+      enabled = false,
       sources = {
         explorer = {
           hidden = true,
