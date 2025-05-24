@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>ov", "<cmd>ObsidianFollowLink vsplit_force<cr>")
 
 vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
 
+vim.keymap.set("n", "<leader>ost", "<cmd>ObsidianTags<cr>")
+
 ---@diagnostic disable: missing-fields
 return {
   "mdavis36/obsidian.nvim",
