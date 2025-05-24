@@ -192,7 +192,7 @@ return {
 
     -- Optional, for templates (see https://github.com/obsidian-nvim/obsidian.nvim/wiki/Using-templates)
     templates = {
-      folder = "2 - Resources/templates",
+      folder = "templates",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
