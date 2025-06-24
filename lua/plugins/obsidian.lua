@@ -6,6 +6,8 @@ vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
 
 vim.keymap.set("n", "<leader>ost", "<cmd>ObsidianTags<cr>")
 
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
+
 ---@diagnostic disable: missing-fields
 return {
   "mdavis36/obsidian.nvim",
