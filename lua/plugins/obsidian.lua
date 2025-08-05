@@ -10,9 +10,8 @@ vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
 
 ---@diagnostic disable: missing-fields
 return {
-  "mdavis36/obsidian.nvim",
-  branch = "feature/force-split-strategy",
-  verstion = "*",
+  "obsidian-nvim/obsidian.nvim",
+  verstion = "v3.13.1",
 
   lazy = true,
   ft = "markdown",
