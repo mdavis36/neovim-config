@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>")
 
-vim.keymap.set("n", "<leader>ov", "<cmd>ObsidianFollowLink vsplit_force<cr>")
+vim.keymap.set("n", "<leader>oV", "<cmd>ObsidianFollowLink vsplit_force<cr>")
 
 vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
 
@@ -8,10 +8,19 @@ vim.keymap.set("n", "<leader>ost", "<cmd>ObsidianTags<cr>")
 
 vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
 
+vim.keymap.set("n", "<leader>o<cr>", "<cmd>ObsidianFollowLink<cr>")
+
+vim.keymap.set("n", "<leader>oit", "<cmd>ObsidianTemplate<cr>")
+
+vim.keymap.set("n", "<leader>od", "<cmd>ObsidianToday<cr>")
+
+-- 'ow' for 'Obsidian Weekly', 'om' for 'Obsidian Monthly', etc.
+vim.keymap.set("n", "<leader>ow", "<cmd>ObsidianNew weekly<cr>", { desc = "New Obsidian weekly note" })
+
 ---@diagnostic disable: missing-fields
 return {
   "obsidian-nvim/obsidian.nvim",
-  verstion = "v3.13.1",
+  version = "v3.13.1",
 
   lazy = true,
   ft = "markdown",
@@ -69,7 +78,7 @@ return {
       -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
       template = nil,
       -- Optional, if you want `Obsidian yesterday` to return the last work day or `Obsidian tomorrow` to return the next work day.
-      workdays_only = true,
+      workdays_only = false,
     },
 
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
