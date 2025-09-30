@@ -1,4 +1,4 @@
 return {
   --disable mini.pairs
-  { "echasnovski/mini.pairs", enabled = false },
+  { "mini-nvim/mini.pairs", enabled = false },
 }
