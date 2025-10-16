@@ -19,8 +19,10 @@ vim.keymap.set("n", "<leader>ow", "<cmd>ObsidianNew weekly<cr>", { desc = "New O
 
 ---@diagnostic disable: missing-fields
 return {
-  "obsidian-nvim/obsidian.nvim",
-  version = "v3.13.1",
+  --"obsidian-nvim/obsidian.nvim",
+  "mdavis36/obsidian.nvim",
+  -- version = "v3.14.2",
+  branch = "md/weekly-cmd",
 
   lazy = true,
   ft = "markdown",
@@ -76,7 +78,7 @@ return {
       -- Optional, default tags to add to each new daily note created.
       default_tags = { "daily-notes" },
       -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-      template = nil,
+      template = "calendar/daily.md",
       -- Optional, if you want `Obsidian yesterday` to return the last work day or `Obsidian tomorrow` to return the next work day.
       workdays_only = false,
     },
@@ -180,7 +182,32 @@ return {
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
-      substitutions = {},
+      substitutions = {
+        pretty_date = function()
+            return os.date("%B %-d, %Y", os.time())
+        end,
+        daily_date = function(ctx)
+            local date_string_yyyymmdd = ctx.partial_note.id
+
+            -- Parse the YYYY-MM-DD string into a table suitable for os.time
+            local year, month, day = date_string_yyyymmdd:match("(%d%d%d%d)-(%d%d)-(%d%d)")
+            local date_table = {
+                year = tonumber(year),
+                month = tonumber(month),
+                day = tonumber(day)
+            }
+
+            -- Convert the date table to a Unix timestamp
+            local timestamp = os.time(date_table)
+
+            -- Format the timestamp into the desired %B %d, %Y format
+            local formatted_date = os.date("%B %d, %Y", timestamp)
+
+            return formatted_date
+            --print(formatted_date)
+            --return os.date("%B %-d, %Y", os.date)
+        end,
+      },
     },
 
     -- Sets how you follow URLs
