@@ -22,7 +22,7 @@ return {
   --"obsidian-nvim/obsidian.nvim",
   "mdavis36/obsidian.nvim",
   -- version = "v3.14.2",
-  branch = "md/weekly-cmd",
+  branch = "md/link-preview",
 
   lazy = true,
   ft = "markdown",
