@@ -1,22 +1,23 @@
-vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>")
+vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Backlinks to current note" })
 
-vim.keymap.set("n", "<leader>oV", "<cmd>ObsidianFollowLink vsplit_force<cr>")
+vim.keymap.set("n", "<leader>oV", "<cmd>ObsidianFollowLink vsplit_force<cr>", { desc = "Open link in v-split" })
 
-vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>")
+vim.keymap.set("n", "<leader>oo", "<cmd>cd ~/PARA<cr>", {desc = "Jump to PARA dir"})
 
-vim.keymap.set("n", "<leader>ost", "<cmd>ObsidianTags<cr>")
+vim.keymap.set("n", "<leader>ost", "<cmd>ObsidianTags<cr>", {desc = "List Obsidian Tags"})
 
-vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>")
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", {desc = "Create new note"})
 
-vim.keymap.set("n", "<leader>o<cr>", "<cmd>ObsidianFollowLink<cr>")
-vim.keymap.set("n", "<leader>op", "<cmd>Obsidian preview_link<cr>")
+vim.keymap.set("n", "<leader>o<cr>", "<cmd>ObsidianFollowLink<cr>", {desc = "Follow current link"})
+vim.keymap.set("n", "<leader>op", "<cmd>Obsidian preview_link<cr>", {desc = "Preview current link"})
 
-vim.keymap.set("n", "<leader>oit", "<cmd>ObsidianTemplate<cr>")
+vim.keymap.set("n", "<leader>oit", "<cmd>ObsidianTemplate<cr>", {desc = "Insert template"})
 
-vim.keymap.set("n", "<leader>od", "<cmd>ObsidianToday<cr>")
-
--- 'ow' for 'Obsidian Weekly', 'om' for 'Obsidian Monthly', etc.
-vim.keymap.set("n", "<leader>ow", "<cmd>ObsidianNew weekly<cr>", { desc = "New Obsidian weekly note" })
+vim.keymap.set("n", "<leader>od", "<cmd>Obsidian daily<cr>", {desc = "Open todays note"})
+vim.keymap.set("n", "<leader>ow", "<cmd>Obsidian weekly<cr>", { desc = "Open this weeks note" })
+vim.keymap.set("n", "<leader>om", "<cmd>Obsidian monthly<cr>", { desc = "Open this months note" })
+vim.keymap.set("n", "<leader>oq", "<cmd>Obsidian quarterly<cr>", { desc = "Open this quarters note" })
+vim.keymap.set("n", "<leader>oy", "<cmd>Obsidian yearly<cr>", { desc = "Open this years note" })
 
 ---@diagnostic disable: missing-fields
 return {
