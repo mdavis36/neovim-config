@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>op", "<cmd>Obsidian preview_link<cr>", {desc = "Pre
 
 vim.keymap.set("n", "<leader>oit", "<cmd>ObsidianTemplate<cr>", {desc = "Insert template"})
 
-vim.keymap.set("n", "<leader>od", "<cmd>Obsidian daily<cr>", {desc = "Open todays note"})
+vim.keymap.set("n", "<leader>od", "<cmd>Obsidian today<cr>", {desc = "Open todays note"})
 vim.keymap.set("n", "<leader>ow", "<cmd>Obsidian weekly<cr>", { desc = "Open this weeks note" })
 vim.keymap.set("n", "<leader>om", "<cmd>Obsidian monthly<cr>", { desc = "Open this months note" })
 vim.keymap.set("n", "<leader>oq", "<cmd>Obsidian quarterly<cr>", { desc = "Open this quarters note" })
@@ -81,10 +81,12 @@ return {
 
     weekly_notes = {
       folder = "notes/dailies",
+      template = "calendar/weekly.md",
     },
 
     monthly_notes = {
       folder = "notes/dailies",
+      template = "calendar/monthly.md",
     },
 
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
