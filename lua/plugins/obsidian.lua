@@ -8,8 +8,7 @@ vim.keymap.set("n", "<leader>ost", "<cmd>ObsidianTags<cr>", {desc = "List Obsidi
 
 vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", {desc = "Create new note"})
 
-vim.keymap.set("n", "<leader>o<cr>", "<cmd>ObsidianFollowLink<cr>", {desc = "Follow current link"})
-vim.keymap.set("n", "<leader>op", "<cmd>Obsidian preview_link<cr>", {desc = "Preview current link"})
+vim.keymap.set("n", "<leader><cr>", "<cmd>Obsidian preview_link<cr>", {desc = "Preview current link"})
 
 vim.keymap.set("n", "<leader>oit", "<cmd>ObsidianTemplate<cr>", {desc = "Insert template"})
 
