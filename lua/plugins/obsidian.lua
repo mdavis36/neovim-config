@@ -18,6 +18,12 @@ vim.keymap.set("n", "<leader>om", "<cmd>Obsidian monthly<cr>", { desc = "Open th
 vim.keymap.set("n", "<leader>oq", "<cmd>Obsidian quarterly<cr>", { desc = "Open this quarters note" })
 vim.keymap.set("n", "<leader>oy", "<cmd>Obsidian yearly<cr>", { desc = "Open this years note" })
 
+vim.keymap.set("n", "<leader>oD", "<cmd>Obsidian dailies<cr>", {desc = "Open todays note"})
+vim.keymap.set("n", "<leader>oW", "<cmd>Obsidian weeklies<cr>", { desc = "Open this weeks note" })
+vim.keymap.set("n", "<leader>oM", "<cmd>Obsidian monthlies<cr>", { desc = "Open this months note" })
+vim.keymap.set("n", "<leader>oQ", "<cmd>Obsidian quarterlies<cr>", { desc = "Open this quarters note" })
+vim.keymap.set("n", "<leader>oY", "<cmd>Obsidian yearlies<cr>", { desc = "Open this years note" })
+
 ---@diagnostic disable: missing-fields
 return {
   --"obsidian-nvim/obsidian.nvim",
