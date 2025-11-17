@@ -18,36 +18,36 @@ return {
     },
     checkbox = {
       enabled = true,
-      bullet = false,
-      unchecked = { icon = "󰆢", highlight = "RenderMarkdownChecked", scope_highlight = nil },
+      bullet = true,
+      unchecked = { icon = " 󰆢 ", highlight = "RenderMarkdownChecked", scope_highlight = nil },
       checked = {
-        icon = "󰅘",
+        icon = " 󰅘  ",
         highlight = "RenderMarkdownChecked",
         scope_highlight = nil
       },
       custom = {
         todo = {
           raw = "[-]",
-          rendered = "󰅘",
+          rendered = " 󰅘 ",
           highlight = "RenderMarkdownChecked",
           scope_highlight = "@markup.strikethrough"
         },
         inprogress = {
           raw = "[~]",
-          rendered = "󰛲",
+          rendered = " 󰛲 ",
           highlight = "RenderMarkdownChecked",
           scope_highlight = nil
         },
         pushed = {
           raw = "[>]",
-          rendered = "󰜶",
+          rendered = " 󰜶 ",
           highlight = "RenderMarkdownChecked",
           scope_highlight = nil
         },
         cancelled = { raw = "[!]",
-          rendered = "󰳤",
+          rendered = " 󰳤 ",
           highlight = "RenderMarkdownChecked",
-          scope_highlight = nil
+          scope_highlight = "@markup.strikethrough"
         },
       },
     },
