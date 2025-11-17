@@ -10,14 +10,46 @@ return {
     },
     heading = {
       sign = true,
-      icons = { '󰲡 ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' },
+      icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
       width = "block",
       position = "inline",
       left_pad = 2,
       right_pad = 2,
     },
     checkbox = {
-      enabled = false,
+      enabled = true,
+      bullet = false,
+      unchecked = { icon = "󰆢", highlight = "RenderMarkdownChecked", scope_highlight = nil },
+      checked = {
+        icon = "󰅘",
+        highlight = "RenderMarkdownChecked",
+        scope_highlight = nil
+      },
+      custom = {
+        todo = {
+          raw = "[-]",
+          rendered = "󰅘",
+          highlight = "RenderMarkdownChecked",
+          scope_highlight = "@markup.strikethrough"
+        },
+        inprogress = {
+          raw = "[~]",
+          rendered = "󰛲",
+          highlight = "RenderMarkdownChecked",
+          scope_highlight = nil
+        },
+        pushed = {
+          raw = "[>]",
+          rendered = "󰜶",
+          highlight = "RenderMarkdownChecked",
+          scope_highlight = nil
+        },
+        cancelled = { raw = "[!]",
+          rendered = "󰳤",
+          highlight = "RenderMarkdownChecked",
+          scope_highlight = nil
+        },
+      },
     },
   },
 
