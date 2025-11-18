@@ -7,3 +7,7 @@ vim.o.swapfile = false
 
 -- Disable LazyVim auto format
 vim.g.autoformat = false
+
+-- Use system clipboard
+vim.o.clipboard = "unnamedplus"
+
