@@ -76,6 +76,7 @@ return {
     log_level = vim.log.levels.INFO,
 
     daily_notes = {
+      enabled = true,
       folder = "notes/dailies",
       date_format = "%Y-%m-%d",
       alias_format = "%B %-d, %Y",
@@ -85,13 +86,27 @@ return {
     },
 
     weekly_notes = {
+      enabled = true,
       folder = "notes/dailies",
       template = "calendar/weekly.md",
     },
 
     monthly_notes = {
+      enabled = true,
       folder = "notes/dailies",
       template = "calendar/monthly.md",
+    },
+
+    quarterly_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      template = "calendar/quarterly.md",
+    },
+
+    yearly_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      template = "calendar/yearly.md",
     },
 
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
