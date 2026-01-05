@@ -25,8 +25,11 @@ vim.keymap.set("n", "<leader>oQ", "<cmd>Obsidian quarterlies<cr>", { desc = "Ope
 vim.keymap.set("n", "<leader>oY", "<cmd>Obsidian yearlies<cr>", { desc = "Open this years note" })
 
 return {
-  "obsidian-nvim/obsidian.nvim",
-  version = "*",
+  --"obsidian-nvim/obsidian.nvim",
+  --version = "*",
+  "mdavis36/obsidian.nvim",
+  branch = "md/main",
+
   ft = "markdown",
 
   opts = {
@@ -38,6 +41,39 @@ return {
       {
         name = "test",
         path = "~/MD-TEST",
+      },
+    },
+
+    templates = {
+      folder = "templates",
+      date_format = "%Y-%m-%d",
+      time_format = "%H:%M",
+      -- A map for custom variables, the key should be the variable and the value a function
+      substitutions = {
+        pretty_date = function()
+            return os.date("%B %-d, %Y", os.time())
+        end,
+        daily_date = function(ctx)
+            local date_string_yyyymmdd = ctx.partial_note.id
+
+            -- Parse the YYYY-MM-DD string into a table suitable for os.time
+            local year, month, day = date_string_yyyymmdd:match("(%d%d%d%d)-(%d%d)-(%d%d)")
+            local date_table = {
+                year = tonumber(year),
+                month = tonumber(month),
+                day = tonumber(day)
+            }
+
+            -- Convert the date table to a Unix timestamp
+            local timestamp = os.time(date_table)
+
+            -- Format the timestamp into the desired %B %d, %Y format
+            local formatted_date = os.date("%B %d, %Y", timestamp)
+
+            return formatted_date
+            --print(formatted_date)
+            --return os.date("%B %-d, %Y", os.date)
+        end,
       },
     },
 
@@ -61,7 +97,7 @@ return {
       date_format = "%Y-%m-%d",
       alias_format = "%B %-d, %Y",
       default_tags = { "daily-notes" },
-      template = "calendar/daily.md",
+      template = "templates/calendar/daily.md",
       workdays_only = false,
     },
 
