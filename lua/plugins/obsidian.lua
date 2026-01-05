@@ -115,13 +115,13 @@ return {
 
     quarterly_notes = {
       enabled = true,
-      folder = "notes/quarterly",
+      folder = "1 - Areas/journal/quarterly",
       template = "calendar/quarterly.md",
     },
 
     yearly_notes = {
       enabled = true,
-      folder = "notes/yearly",
+      folder = "1 - Areas/journal/yearly",
       template = "calendar/yearly.md",
     },
   },
