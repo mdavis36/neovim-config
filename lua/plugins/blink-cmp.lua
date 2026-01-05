@@ -4,11 +4,11 @@ return {
     completion = {
       ghost_text = {
         --enabled = false, when .md
-        enabled = function() return not vim.tbl_contains({ "markdown" }, vim.bo.filetype) end,
+        --enabled = function() return not vim.tbl_contains({ "markdown" }, vim.bo.filetype) end,
       },
       menu = {
         --auto_show = false, when .md
-        auto_show = function() return not vim.tbl_contains({ "markdown" }, vim.bo.filetype) end,
+        --auto_show = function() return not vim.tbl_contains({ "markdown" }, vim.bo.filetype) end,
       },
 
       list = {
