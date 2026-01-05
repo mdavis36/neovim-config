@@ -57,7 +57,7 @@ return {
 
     daily_notes = {
       enabled = true,
-      folder = "notes/dailies",
+      folder = "1 - Areas/journal/daily",
       date_format = "%Y-%m-%d",
       alias_format = "%B %-d, %Y",
       default_tags = { "daily-notes" },
@@ -67,25 +67,25 @@ return {
 
     weekly_notes = {
       enabled = true,
-      folder = "notes/dailies",
+      folder = "1 - Areas/journal/weekly",
       template = "calendar/weekly.md",
     },
 
     monthly_notes = {
       enabled = true,
-      folder = "notes/dailies",
+      folder = "1 - Areas/journal/monthly",
       template = "calendar/monthly.md",
     },
 
     quarterly_notes = {
       enabled = true,
-      folder = "notes/dailies",
+      folder = "notes/quarterly",
       template = "calendar/quarterly.md",
     },
 
     yearly_notes = {
       enabled = true,
-      folder = "notes/dailies",
+      folder = "notes/yearly",
       template = "calendar/yearly.md",
     },
   },
