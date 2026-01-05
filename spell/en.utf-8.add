@@ -4,3 +4,8 @@ NVIDIA
 nvfuser
 JIT
 HIR
+nvFuser
+IrBuilder
+IrContainer
+IrCloner
+FusionGuard
