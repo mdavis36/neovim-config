@@ -55,27 +55,39 @@ return {
       return suffix
     end,
 
-    --note_frontmatter_func = function(note)
-    --  -- Add the title of the note as an alias.
-    --  if note.title then
-    --    note:add_alias(note.title)
-    --  end
+    daily_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      date_format = "%Y-%m-%d",
+      alias_format = "%B %-d, %Y",
+      default_tags = { "daily-notes" },
+      template = "calendar/daily.md",
+      workdays_only = false,
+    },
 
-    --  local out = {
-    --    id = note.id,
-    --    aliases = note.aliases,
-    --  }
+    weekly_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      template = "calendar/weekly.md",
+    },
 
-    --  -- `note.metadata` contains any manually added fields in the frontmatter.
-    --  -- So here we just make sure those fields are kept in the frontmatter.
-    --  if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-    --    for k, v in pairs(note.metadata) do
-    --      out[k] = v
-    --    end
-    --  end
+    monthly_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      template = "calendar/monthly.md",
+    },
 
-    --  return out
-    --end,
+    quarterly_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      template = "calendar/quarterly.md",
+    },
+
+    yearly_notes = {
+      enabled = true,
+      folder = "notes/dailies",
+      template = "calendar/yearly.md",
+    },
   },
 }
 
