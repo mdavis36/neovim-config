@@ -44,6 +44,12 @@ return {
       },
     },
 
+    ui = {
+      enable = false,         -- set to false to disable all additional syntax features
+    },
+
+    preferred_link_style = "markdown",
+
     templates = {
       folder = "templates",
       date_format = "%Y-%m-%d",
