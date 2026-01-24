@@ -45,6 +45,9 @@ return {
         },
       },
     },
+    indent = {
+      enabled = true,
+    },
   },
 
   ft = { "markdown", "norg", "rmd", "org", "codecompanion" },
